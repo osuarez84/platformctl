@@ -1,0 +1,18 @@
+requiredstatuschecks: null # Pending to be defined
+requiredpullrequestreviews:
+    bypasspullrequestallowances: null
+    dismissalrestrictions: null
+    dismissstalereviews: true
+    requirecodeownerreviews: false
+    requiredapprovingreviewcount: 2
+    requirelastpushapproval: false
+enforceadmins: true
+restrictions: null # pending to be defined
+requirelinearhistory: true
+allowforcepushes: true
+allowdeletions: true
+requiredconversationresolution: true
+blockcreations: true
+lockbranch: true
+allowforksyncing: false
+

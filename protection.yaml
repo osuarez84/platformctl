@@ -1,0 +1,30 @@
+requiredstatuschecks: null
+requiredpullrequestreviews:
+    bypasspullrequestallowances: null
+    dismissalrestrictions: null
+    dismissstalereviews: false
+    requirecodeownerreviews: false
+    requiredapprovingreviewcount: 1
+    requirelastpushapproval: false
+enforceadmins:
+    url: https://api.github.com/repos/osuarez84/ddd-python/branches/main/protection/enforce_admins
+    enabled: false
+restrictions: null
+requirelinearhistory:
+    enabled: false
+allowforcepushes:
+    enabled: false
+allowdeletions:
+    enabled: false
+requiredconversationresolution:
+    enabled: true
+blockcreations:
+    enabled: false
+lockbranch:
+    enabled: false
+allowforksyncing:
+    enabled: false
+requiredsignatures:
+    url: https://api.github.com/repos/osuarez84/ddd-python/branches/main/protection/required_signatures
+    enabled: false
+url: https://api.github.com/repos/osuarez84/ddd-python/branches/main/protection
