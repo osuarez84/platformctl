@@ -1,3 +1,4 @@
 platformctl
 test_backups
 test_clickhouse
+.DS_store
