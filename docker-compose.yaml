@@ -1,0 +1,22 @@
+version: '3'
+services:
+  clickhouse:
+    image: clickhouse/clickhouse-server
+    ports:
+      - 8123:8123
+      - 9000:9000
+    volumes:
+      - ./test_clickhouse:/var/lib/clickhouse
+      - ./test_ch_config.xml:/etc/clickhouse-server/config.d/test_ch_config.xml
+      - ./test_backups:/backups
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    restart: always
+    command:
+      - '/bin/bash'
+      - '-c'
+      - |
+        /entrypoint.sh clickhouse-server &&
+        until clickhouse-client --query "SELECT 1"; do
+          echo "Waiting for clickhouse-server..."
+          sleep 1
+        done && clickhouse-init --query "SOURCE /docker-entrypoint-initdb.d/init.sql"
