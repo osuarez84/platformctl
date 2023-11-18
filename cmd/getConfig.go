@@ -44,6 +44,10 @@ func init() {
 	getConfigCmd.Flags().StringP("repo", "r", "", "Name of the repo")
 	getConfigCmd.Flags().StringP("token", "t", "", "PAT token")
 	getConfigCmd.Flags().StringP("branch", "b", "main", "Repo branch")
+
+	getConfigCmd.MarkFlagRequired("repo")
+	getConfigCmd.MarkFlagRequired("token")
+	getConfigCmd.MarkFlagRequired("branch")
 }
 
 func getRules(repo, token, branch string) (*github.Protection, error) {

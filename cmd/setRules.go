@@ -63,4 +63,9 @@ func init() {
 	setRulesCmd.Flags().StringP("token", "t", "", "PAT token")
 	setRulesCmd.Flags().StringP("branch", "b", "main", "Repo branch")
 	setRulesCmd.Flags().StringP("file", "f", "", "YAML file with rules")
+
+	setRulesCmd.MarkFlagRequired("repo")
+	setRulesCmd.MarkFlagRequired("token")
+	setRulesCmd.MarkFlagRequired("file")
+	setRulesCmd.MarkFlagRequired("branch")
 }
